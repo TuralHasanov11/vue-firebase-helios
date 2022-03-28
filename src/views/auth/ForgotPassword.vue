@@ -78,11 +78,11 @@ export default {
 }
 
 .reset-password .form-wrap .reset h2 {
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
 }
 
 .reset-password .form-wrap .reset p{
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 2em;
 }
 </style>

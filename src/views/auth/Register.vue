@@ -5,7 +5,7 @@
         Already have an account?
         <router-link class="router-link" :to="{ name: 'Login' }">Login</router-link>
       </p>
-      <h2>Create Your FireBlog Account</h2>
+      <h2>Create Your {{$store.state.appName}} Account</h2>
       <div class="inputs">
         <div class="input">
           <input type="text" placeholder="First Name" v-model="firstName" />
@@ -30,6 +30,7 @@
         <div v-show="error" class="error">{{ this.errorMsg }}</div>
       </div>
       <button>Sign Up</button>
+      <button style="background-color: #7289da;" @click.prevent="$router.push({name:'Home'})">Back to Home</button>
       <div class="angle"></div>
     </form>
     <div class="background"></div>
@@ -47,11 +48,11 @@ export default {
   
   data() {
     return {
-      firstName: "asadd",
-      lastName: "asdad",
-      username: "asdsadd",
-      email: "test2@test.com",
-      password: "password",
+      firstName: "",
+      lastName: "",
+      username: "",
+      email: "",
+      password: "",
       error: null,
       errorMsg: "",
     };
@@ -91,6 +92,6 @@ export default {
 
 <style scoped>
 .register h2 {
-    max-width: 350px;
+    max-width: 22em;
 }
 </style>

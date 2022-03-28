@@ -1,8 +1,8 @@
 <template>
   <div class="blog-card-wrap">
     <Loading v-if="loading"/>
-    <div v-else class="blog-cards container">
-      <PostCard :post="post" v-for="(post, index) in posts" :key="index" />
+    <div v-else class="blog-cards d-flex flex-wrap justify-content-center">
+      <PostCard :post="post" v-for="(post, index) in posts" :key="index" :profile="profile" />
     </div>
   </div>
 </template>

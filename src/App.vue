@@ -2,7 +2,12 @@
   <div class="app-wrapper">
     <div class="app">
       <Navbar v-if="!navigation" />
-      <router-view />
+      <main v-if="!navigation" class="py-4">
+        <router-view />
+      </main>
+       <main v-else>
+        <router-view />
+      </main>
       <Footer v-if="!navigation" />
     </div>
   </div>
@@ -62,25 +67,22 @@ export default {
   flex-direction: column;
   min-height: 100vh;
 }
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
+
 .link {
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
+  color: #7289DA
 }
 .link-light {
   color: #fff;
 }
 .arrow {
-  margin-left: 8px;
-  width: 12px;
+  margin-left: 0.5em;
+  width: 0.75em;
 }
 .arrow path {
-    fill: #000;
+    fill: #7289DA
   }
 .arrow-light path {
   fill: #fff;
@@ -89,11 +91,11 @@ button,
 .router-button {
   transition: 500ms ease all;
   cursor: pointer;
-  margin-top: 24px;
-  padding: 12px 24px;
+  margin-top: 1.5em;
+  padding: 0.75em 1.5em;
   background-color: #303030;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 1.25em;
   border: none;
   text-transform: uppercase;
 }
@@ -105,17 +107,17 @@ button,
     background-color: rgba(48, 48, 48, 0.7);
   } 
 .button-ghost {
-  color: #000;
+  color: #7289DA;
   padding: 0;
   border-radius: 0;
-  margin-top: 50px;
-  font-size: 15px;
+  margin-top: 3em;
+  font-size: 0.9em;
   font-weight: 500;
   background-color: transparent;
 }
 
 .button-ghost i{
-  margin-left: 8px;
+  margin-left: 0.5em;
 }
 
 @media (min-width: 692px) {
@@ -128,7 +130,7 @@ button,
 
 .button-light {
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 0.1em solid #fff;
   color: #fff;
 }
 .button-inactive {
@@ -138,47 +140,21 @@ button,
 }
 .error {
   text-align: center;
-  font-size: 12px;
-  color: red;
+  font-size: 0.75em;
+  color: tomato;
 }
 .blog-card-wrap {
   position: relative;
-  padding: 80px 16px;
+  padding: 5em 1em;
   background-color: #f1f1f1;
 }
 
-.blog-card-wrap .blog-cards {
-  display: grid;
-  gap: 32px;
-  grid-template-columns: 1fr;
 
-}
-
-@media (min-width: 900px) {
-  .blog-card-wrap .blog-cards{
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (min-width: 1200px) {
-  .blog-card-wrap .blog-cards{
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 480px) {
+@media (min-width: 576px) {
   .blog-card-wrap{
-    padding: 100px 16px;
+    padding: 6em 1em;
   }
 
-  .blog-card-wrap .blog-cards{
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
-.blog-cards {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 </style>

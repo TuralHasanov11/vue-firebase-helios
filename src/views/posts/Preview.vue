@@ -25,20 +25,16 @@ export default {
   min-height: 100%;
 }
 
-.post-view .container {
-    max-width: 1000px;
-    padding: 60px 25px;
-}
 .post-view .ql-editor {
     padding: 0;
 }
 .post-view h2 {
-    margin-bottom: 16px;
+    margin-bottom: 1em;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 2em;
 }
 .post-view img {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 2em;
 }
 </style>

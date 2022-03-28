@@ -63,7 +63,7 @@ export default {
     fileChange() {
       this.file = this.$refs.blogPhoto.files[0];
       const fileName = this.file.name;
-      this.$store.commit("posts/fileNameChange", fileName);
+      this.$store.commit("posts/fileNameChange", fileName+(Math.random() + 1).toString(36).substring(7));
       this.$store.commit("posts/createFileURL", URL.createObjectURL(this.file));
     },
 
@@ -84,6 +84,7 @@ export default {
         }, 
         async () => {
           await getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+            
              Editor.insertEmbed(cursorLocation, "image", downloadURL);
             resetUploader();
           });
@@ -119,6 +120,7 @@ export default {
                   date: Date.now(),
                 });
 
+                this.$store.commit('posts/clearPostPreview')
                 this.loading = false;
                 this.$router.push({ name: "Post", params: { post: docRef.id } }); 
               });
@@ -194,10 +196,10 @@ export default {
 .create-post .router-button {
     transition: 0.5s ease-in-out all;
     align-self: center;
-    font-size: 14px;
+    font-size: 0.8em;
     cursor: pointer;
-    border-radius: 20px;
-    padding: 12px 24px;
+    border-radius: 1.25em;
+    padding: 0.75em 1.5em;
     color: #fff;
     background-color: #303030;
     text-decoration: none;
@@ -210,7 +212,7 @@ export default {
 .create-post .container {
     position: relative;
     height: 100%;
-    padding: 10px 25px 60px;
+    padding: 0.6em 1.5em 3.75em;
 }
 
 .create-post .invisible {
@@ -219,17 +221,17 @@ export default {
 
 .create-post .err-message {
     width: 100%;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 0.75em;
+    border-radius: 0.5em;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 0.6em;
     background-color: #303030;
     opacity: 1;
     transition: 0.5s ease all;
 }
 
 .create-post .err-message p {
-    font-size: 14px;
+    font-size: 0.8em;
 }
 
 .create-post .err-message span {
@@ -238,27 +240,27 @@ export default {
 
 .create-post .blog-info {
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 2em;
 }
 
 .create-post .blog-info input:nth-child(1) {
-    min-width: 300px;
+    min-width: 18em;
 }
 .create-post .blog-info input {
     transition: 0.5s ease-in-out all;
-    padding: 10px 4px;
+    padding: 0.6em 0.25em;
     border: none;
-    border-bottom: 1px solid #303030;
+    border-bottom: 0.1em solid #303030;
 }
 
 .create-post .blog-info input:focus {
     outline: none;
-    box-shadow: 0 1px 0 0 #303030;
+    box-shadow: 0 0.1em 0 0 #303030;
 }
 
 .create-post .blog-info .upload-file {
     flex: 1;
-    margin-left: 16px;
+    margin-left: 1em;
     position: relative;
     display: flex;
 }
@@ -267,12 +269,12 @@ export default {
     display: none;
 }
 .create-post .blog-info .upload-file .preview {
-    margin-left: 16px;
+    margin-left: 1em;
     text-transform: initial;
 }
 .create-post .blog-info .upload-file span {
-    font-size: 12px;
-    margin-left: 16px;
+    font-size: 0.75em;
+    margin-left: 1em;
     align-self: center;
 }
 
@@ -297,14 +299,14 @@ export default {
 }
 
 .create-post .editor .ql-editor {
-    padding: 20px 16px 30px;
+    padding: 1.25em 1em 2em;
 }
 
 .create-post .blog-actions {
-    margin-top: 32px;
+    margin-top: 2em;
 }
 
 .create-post .blog-actions button {
-    margin-right: 16px;
+    margin-right: 1em;
 }
 </style>

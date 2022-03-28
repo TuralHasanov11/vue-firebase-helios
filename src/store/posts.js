@@ -98,6 +98,13 @@ const mutations = {
         state.postPreview.photoName = payload.coverPhotoName;
     },
 
+    clearPostPreview(){
+        state.postPreview.title = "";
+        state.postPreview.text = "";
+        state.postPreview.photoFileURL = "";
+        state.postPreview.photoName = "";
+    }
+
 }
 
 export default {

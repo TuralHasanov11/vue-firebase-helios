@@ -92,34 +92,30 @@ export default {
 </script>
 
 <style scoped>
-.profile .container {
-    max-width: 1000px;
-    padding: 60px 25px;
-}
 
 .profile .container h2{
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 1em;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 2em;
 }
 .profile .container .profile-info {
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    padding: 32px;
+    border-radius: 0.5em;
+    box-shadow: 0 0.25em 0.4em -0.1em rgba(0, 0, 0, 0.1), 0 2px 0.25em -0.1em rgba(0, 0, 0, 0.06);
+    padding: 2em;
     background-color: #f1f1f1;
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: 32px auto;
+    max-width: 37.5em;
+    margin: 2em auto;
 }
 
 .profile .container .profile-info .initials {
     position: initial;
-    width: 80px;
-    height: 80px;
-    font-size: 32px;
-    background-color: #303030;
+    width: 3em;
+    height: 3em;
+    font-size: 1.5em;
+    background-color: #7289da;
     color: #fff;
     display: flex;
     align-self: center;
@@ -129,20 +125,20 @@ export default {
 }
 
 .profile .container .profile-info .input {
-    margin: 16px 0;
+    margin: 1em 0;
 }
 
 .profile .container .profile-info .input label {
-    font-size: 14px;
+    font-size: 1.25em;
     display: block;
-    padding-bottom: 6px;
+    padding-bottom: 0.4em;
 }
 .profile .container .profile-info .input input {
     width: 100%;
     border: none;
     background-color: #f2f7f6;
-    padding: 8px;
-    height: 50px;
+    padding: 0.5em;
+    height: 3em;
 }
 
 .profile .container .profile-info .input input:focus {

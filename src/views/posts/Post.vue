@@ -7,8 +7,8 @@
       </div>
       <div class="quillWrapper">
         <h2>{{ post.title }}</h2>
-        <h4>Posted on: {{ new Date(post.created_at).toLocaleString("en-us", { dateStyle: "long" }) }}</h4>
-        <img :src="post.coverPhoto" alt="" />
+        <h4>Posted on: {{ new Date(post.date).toLocaleString("en-us", { dateStyle: "long" }) }}</h4>
+        <img class="coverPhoto" :src="post.coverPhoto" alt="" />
         <div class="post-content ql-editor" v-html="post.text"></div>
       </div>
      </div>
@@ -41,21 +41,26 @@ export default {
 <style>
 .post-view h4 {
     font-weight: 400;
-    font-size: 14px;
-    margin-bottom: 24px;
+    font-size: 0.8em;
+    margin-bottom: 1.5em;
 }
 
-.post-view.container {
-    padding: 1em 4em;
+.post-view img.coverPhoto{
+  max-height: 30em;
+  max-width: 80%;
 }
 
+.post-view .quillWrapper img:not(.coverPhoto){
+  max-height: 25em;
+  max-width: 30em;
+}
 
 .blog-actions {
   margin: 2em auto;
 }
 
 .blog-actions button {
-    margin-right: 16px;
+    margin-right: 1em;
 }
 
 .router-button {
@@ -66,10 +71,10 @@ export default {
 .router-button {
     transition: 0.5s ease-in-out all;
     align-self: center;
-    font-size: 14px;
+    font-size: 0.8em;
     cursor: pointer;
     border-radius: 20px;
-    padding: 12px 24px;
+    padding: 12px 1.5em;
     color: #fff;
     background-color: #303030;
     text-decoration: none;

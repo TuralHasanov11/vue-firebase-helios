@@ -26,8 +26,8 @@ export default {
 
 .loading span {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 3.75em;
+    height: 3.75em;
     margin: 0 auto;
     border: 3px solid transparent;
     border-top-color: #fff;

@@ -37,7 +37,7 @@ export default {
 .blog-wrapper {
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0.25em 0.4em -0.1em #7289da12, 0 2px 0.25em -0.1em rgba(0, 0, 0, 0.06);
 }
 
 .blog-wrapper .blog-content {
@@ -50,24 +50,24 @@ export default {
 }
 
 .blog-wrapper .blog-content div {
-    max-width: 375px;
-    padding: 72px 24px;   
+    max-width: 24em;
+    padding: 4.5em 1.5em;   
 }
 
 .blog-wrapper .blog-content div h2{
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 300;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-bottom: 1.5em;
 }
 .blog-wrapper .blog-content div p {
-    font-size: 15px;
+    font-size: 1em;
     font-weight: 300;
     line-height: 1.7;
 }
 .blog-wrapper .blog-content div .content-preview {
     font-size: 13px;
-    max-height: 24px;
+    max-height: 1.5em;
     width: 250px;
     white-space: nowrap;
     overflow: hidden;
@@ -76,9 +76,9 @@ export default {
 .blog-wrapper .blog-content div .link {
     display: inline-flex;
     align-items: center;
-    margin-top: 32px;
+    margin-top: 2em;
     padding-bottom: 4px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 0.1em solid transparent;
     transition: 0.5s ease-in all;
 }
 
@@ -91,7 +91,7 @@ export default {
 .blog-wrapper .blog-photo {
     order: 1;
     flex: 3;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 0.4em -0.1em #7289da13, 0 0.1em 0.25em -0.1em rgba(0, 0, 0, 0.06);
 }
 
 .blog-wrapper .blog-photo img {
@@ -117,11 +117,11 @@ export default {
     }
 
     .blog-wrapper .blog-content div{
-        padding: 0 24px;
+        padding: 0 1.5em;
     }
 
     .blog-wrapper .blog-content div h2 {
-        font-size: 40px;
+        font-size: 2.5em;
     }
 }
 

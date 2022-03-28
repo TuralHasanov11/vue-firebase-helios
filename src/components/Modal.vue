@@ -29,16 +29,16 @@ export default {
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #7289dab3;
 }
 
 .modal .modal-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 8px;
-    width: 300px;
-    padding: 40px 30px;
+    border-radius: 0.5em;
+    width: 19em;
+    padding: 2.5em 2em;
     background-color: #fff;
 }
 

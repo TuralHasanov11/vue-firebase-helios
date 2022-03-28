@@ -107,19 +107,19 @@ export default {
 <style scoped>
 header {
   background-color: #fff;
-  padding: 0 25px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 0 1.5em;
+  box-shadow: 0 0.25em 0.375em -0.1em rgba(0, 0, 0, 0.1), 0 0.1em 0.25em -0.1em rgba(0, 0, 0, 0.06);
   z-index: 99;
 
 }
 
 header nav {
     display: flex;
-    padding: 25px 0;
+    padding: 1.5em 0;
 }
 
 header nav .mobile-user-menu {
-    margin-right: 40px;
+    margin-right: 2.5em;
 }
 
 header nav .nav-links {
@@ -131,11 +131,11 @@ header nav .nav-links {
 }
 
 header nav .nav-links ul {
-    margin-right: 32px;
+    margin-right: 2em;
 }
 
 header nav .nav-links ul .link {
-    margin-right: 32px;
+    margin-right: 2em;
 }
 header nav .nav-links ul .link:last-child {
     margin-right: 0;
@@ -146,11 +146,11 @@ header nav .nav-links .profile {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 50%;
     color: #fff;
-    background-color: #303030;
+    background-color: #637acc;
 }
 
 header nav .nav-links .profile  span {
@@ -159,25 +159,25 @@ header nav .nav-links .profile  span {
 
 header nav .nav-links .profile .profile-menu {
     position: absolute;
-    top: 60px;
+    top: 3.75em;
     right: 0;
     width: 250px;
-    background-color: #303030;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: #637acc;
+    box-shadow: 0 0.25em 0.375em -0.1em rgba(0, 0, 0, 0.1), 0 0.1em 0.25em -0.1em rgba(0, 0, 0, 0.06);
 }
 
 header nav .nav-links .profile .profile-menu .info {
     display: flex;
     align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #fff;
+    padding: 1em;
+    border-bottom: 0.1em solid #fff;
 }
 header nav .nav-links .profile .profile-menu .initials {
     position: initial;
-    width: 40px;
-    height: 40px;
+    width: 2.5em;
+    height: 2.5em;
     background-color: #fff;
-    color: #303030;
+    color: #7289da;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -185,19 +185,19 @@ header nav .nav-links .profile .profile-menu .initials {
 }
 header nav .nav-links .profile .profile-menu .right {
         flex: 1;
-        margin-left: 24px;
+        margin-left: 1.5em;
 }
 
 header nav .nav-links .profile .profile-menu .right p:nth-child(1){
-    font-size: 14px;
+    font-size: 0.8em;
 }
 
 header nav .nav-links .profile .profile-menu .right p:nth-child(2), 
 header nav .nav-links .profile .profile-menu .right p:nth-child(3) {
-    font-size: 12px;
+    font-size: 0.75em;
 }
 header nav .nav-links .profile .profile-menu .options {
-    padding: 15px;
+    padding: 1em;
 }
 
 header nav .nav-links .profile .profile-menu .options .option {
@@ -205,16 +205,16 @@ header nav .nav-links .profile .profile-menu .options .option {
     color: #fff;
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 0.75em;
 }
 
 header nav .nav-links .profile .profile-menu .options .option .icon {
-    width: 18px;
+    width: 1.1em;
     height: auto;
 }
 header nav .nav-links .profile .profile-menu .options .option p {
-    font-size: 14px;
-    margin-left: 12px;
+    font-size: 0.8em;
+    margin-left: 0.75em;
 }
 header nav .nav-links .profile .profile-menu .options .option p:last-child {
     margin-bottom: 0px;
@@ -227,21 +227,21 @@ header nav .branding {
 
 header nav .branding .header {
     font-weight: 600;
-    font-size: 24px;
-    color: #000;
+    font-size: 1.5em;
+    color: #7289DA;
     text-decoration: none;
 }
 
 header .menu-icon {
     cursor: pointer;
     position: absolute;
-    top: 32px;
-    right: 25px;
-    height: 25px;
+    top: 2em;
+    right: 1.5em;
+    height: 1.5em;
     width: auto;
 }
 header .mobile-nav {
-    padding: 20px;
+    padding: 1.25em;
     width: 70%;
     max-width: 250px;
     display: flex;
@@ -254,7 +254,7 @@ header .mobile-nav {
   }
 
 header .mobile-nav .link {
-    padding: 15px 0;
+    padding: 1em 0;
     color: #fff;
 }
 header .mobile-nav-enter-active,
@@ -272,11 +272,11 @@ header .mobile-nav-leave-to {
 }
 header .link {
     font-weight: 500;
-    padding: 0 8px;
+    padding: 0 0.5em;
     transition: 0.3s color ease;
 }
 
 header .link:hover {
-    color: #1eb8b8;
+    color: #7289DA;
 }
 </style>

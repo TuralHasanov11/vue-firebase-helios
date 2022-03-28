@@ -5,7 +5,7 @@
         Don't have an account?
         <router-link class="router-link" :to="{ name: 'Register' }">Register</router-link>
       </p>
-      <h2>Login to FireBlogs</h2>
+      <h2>Login to {{$store.state.appName}}</h2>
       <div class="inputs">
         <div class="input">
           <input type="text" placeholder="Email" v-model="email" />
@@ -21,6 +21,7 @@
         >Forgot your password?</router-link
       >
       <button @click.prevent="login">Sign In</button>
+      <button style="background-color: #7289da;" @click.prevent="$router.push({name:'Home'})">Back to Home</button>
       <div class="angle"></div>
     </form>
     <div class="background"></div>
@@ -36,8 +37,8 @@ export default {
 
   data() {
     return {
-      email: "test2@test.com",
-      password: "password",
+      email: "",
+      password: "",
       error: null,
       errorMsg: "",
     };
@@ -73,15 +74,15 @@ export default {
 }
 
 .form-wrap .login-register {
-    margin-bottom: 32px;
+    margin-bottom: 2em;
 }
 
 .form-wrap .login-register .router-link {
-    color: #000;
+    color: #7289DA;
 }
 
 .form-wrap form {
-    padding: 0 10px;
+    padding: 0 0.6em;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -92,15 +93,14 @@ export default {
 
 .form-wrap form h2 {
     text-align: center;
-    font-size: 32px;
+    font-size: 2em;
     color: #303030;
-    margin-bottom: 40px;
+    margin-bottom: 2.5em;
 }
 
 .form-wrap form .inputs {
       width: 100%;
-      max-width: 350px;
-
+      max-width: 22rem;
 }
 
 .form-wrap form .inputs .input {
@@ -108,15 +108,15 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
 }
 
 .form-wrap form .inputs .input input {
     width: 100%;
     border: none;
     background-color: #f2f7f6;
-    padding: 4px 4px 4px 30px;
-    height: 50px;
+    padding: 0.25em 0.25em 0.25em 2em;
+    height: 3em;
 }
 
 .form-wrap form .inputs .input input:focus {
@@ -124,18 +124,18 @@ export default {
 }
 
 .form-wrap form .inputs .input .icon {
-    width: 12px;
+    width: 0.75em;
     position: absolute;
-    left: 6px;
+    left: 0.4em;
 }
 
 .form-wrap .forgot-password {
     text-decoration: none;
-    color: #000;
+    color: #7289DA;
     cursor: pointer;
-    font-size: 14px;
-    margin: 16px 0 32px;
-    border-bottom: 1px solid transparent;
+    font-size: 0.8em;
+    margin: 1em 0 2em;
+    border-bottom: 0.1em solid transparent;
     transition: 0.5s ease all;
 }
 
@@ -148,15 +148,15 @@ export default {
     position: absolute;
     background-color: #fff;
     transform: rotateZ(3deg);
-    width: 60px;
-    right: -30px;
+    width: 4em;
+    right: -2em;
     height: 101%;
 }
 .form-wrap .background {
     display: none;
     flex: 2;
     background-size: cover;
-    background-image: url("@/assets/background.png");
+    background-image: url("@/assets/coding.jpg");
     width: 100%;
     height: 100%;
 }
@@ -168,11 +168,11 @@ export default {
     }
 
     .form-wrap form {
-      padding: 0 50px;
+      padding: 0 3em;
     }
 
     .form-wrap form h2 {
-        font-size: 40px;
+        font-size: 2.5em;
     }
 
     .form-wrap .angle {
